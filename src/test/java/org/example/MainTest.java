@@ -3,8 +3,6 @@ package org.example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class MainTest {
 
     @Test void return0_whenFibonacci_gets0() { testACase(0, 0); }
@@ -12,13 +10,13 @@ class MainTest {
     @Test void return1_whenFibonacci_gets2() { testACase(2, 1); }
     @Test void return2_whenFibonacci_gets3() { testACase(3, 2); }
 
-    void testACase(int rowIndex, int expectedNumber) {
+    void testACase(int n, int expected) {
         //GIVEN
-        int number = rowIndex;
+        //  -> n
         //WHEN
-        int actual = Main.fibonacci(number);
+        int actual = Main.fibonacci(n);
         //THEN
-        int expected = expectedNumber;
+        //  -> expected
         Assertions.assertEquals(expected,actual);
     }
 
