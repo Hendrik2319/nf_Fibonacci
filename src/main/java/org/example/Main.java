@@ -2,6 +2,7 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
+        showFibonacci(-4);
         showFibonacci(-3);
         showFibonacci(-2);
         showFibonacci(-1);
@@ -9,6 +10,7 @@ public class Main {
         showFibonacci(1);
         showFibonacci(2);
         showFibonacci(3);
+        showFibonacci(4);
     }
 
     private static void showFibonacci(int n) {
