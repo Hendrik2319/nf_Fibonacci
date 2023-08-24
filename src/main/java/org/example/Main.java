@@ -2,8 +2,17 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        int eingabe = 1;
-        System.out.println("Fibonacci( "+ eingabe +" ) = " + fibonacci(eingabe));
+        showFibonacci(-3);
+        showFibonacci(-2);
+        showFibonacci(-1);
+        showFibonacci(0);
+        showFibonacci(1);
+        showFibonacci(2);
+        showFibonacci(3);
+    }
+
+    private static void showFibonacci(int n) {
+        System.out.println("Fibonacci( "+ n +" ) = " + fibonacci(n));
     }
 
     public static int fibonacci(int n) {
@@ -17,11 +26,20 @@ public class Main {
         if (n==1)
             return fib1;
 
-        for (int i = 2; i <= n; i++) {
-            sumFib = fib0 + fib1;
-            fib0 = fib1;
-            fib1 = sumFib;
+        if (n > 0) {
+            for (int i = 2; i <= n; i++) {
+                sumFib = fib0 + fib1;
+                fib0 = fib1;
+                fib1 = sumFib;
+            }
+        } else {
+            for (int i = -1; i >= n; i--) {
+                sumFib = fib1 - fib0;
+                fib1 = fib0;
+                fib0 = sumFib;
+            }
         }
+
         return sumFib;
     }
 }
