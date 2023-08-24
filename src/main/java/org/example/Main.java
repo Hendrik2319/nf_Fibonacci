@@ -3,7 +3,12 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
         for (int n=-4; n<=4; n++)
-            System.out.println("Fibonacci( "+ n +" ) = " + fibonacci(n));
+            System.out.println("Fibonacci( "+n+" ) = " + fibonacci(n));
+
+        double init0 = 0.0;
+        double init1 = 0.1;
+        for (int n=-4; n<=4; n++)
+            System.out.println("Fibonacci( "+n+", "+init0+", "+init1+" ) = " + fibonacci(n, init0, init1));
     }
 
     public static int fibonacci(int n) {
